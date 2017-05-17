@@ -1,4 +1,8 @@
-select date , temp from temp where zipcode > 300000 and zipcode <399999;
+1. select date , temp from temp where zipcode > 300000 and zipcode <399999;
 
-salect date , MAX(temp) from temp group by date;
+2. salect date , MAX(temp) from temp group by date;
+
+4. CREATE VIEW temprature_data_vw AS select *from temp;
+
+5. insert overwrite  '/user/home/temp.txt' row format delimited fields terminated by '|' select *from temprature_data_vw;
 
